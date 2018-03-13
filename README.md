@@ -15,11 +15,11 @@ git clone git://github.com/lswang2/newlib
 
 - NOTE: on 32-bit machines --disable-werror is needed due to an enum acting as bit mask is considered signed
 
-mkdir bld-or1k-src bld-or1k-gcc
+mkdir build-binutils build-gcc build-newlib
 
-cd bld-or1k-src
+cd build-binutils
 
-../or1k-src/configure --target=or1k-elf --prefix=/usr/local/or1k --enable-shared --disable-itcl --disable-tk --disable-tcl --disable-winsup --disable-libgui --disable-rda --disable-sid --disable-sim --disable-gdb --with-sysroot --disable-newlib --disable-libgloss --disable-werror
+../binutils-gdb/configure --target=or1k-elf --prefix=/usr/local/or1k --enable-shared --disable-itcl --disable-tk --disable-tcl --disable-winsup --disable-libgui --disable-rda --disable-sid --disable-sim --disable-gdb --with-sysroot --disable-newlib --disable-libgloss --disable-werror
 
 make
 
@@ -27,7 +27,7 @@ make install
 
 # Build gcc
 
-cd ../bld-or1k-gcc
+cd ../build-gcc
 
 ../or1k-gcc/configure --target=or1k-elf --prefix=/usr/local/or1k --enable-languages=c --disable-shared --disable-libssp
 
@@ -37,9 +37,9 @@ make install
 
 # build newlib and gdb (without or1ksim in this case)
 
-cd ../bld-or1k-src
+cd ../build-newlib
 
-../or1k-src/configure --target=or1k-elf --prefix=/usr/local/or1k --enable-shared --disable-itcl --disable-tk --disable-tcl --disable-winsup --disable-libgui --disable-rda --disable-sid --enable-sim --disable-or1ksim --enable-gdb --with-sysroot --enable-newlib --enable-libgloss --disable-werror
+../newlib/configure --target=or1k-elf --prefix=/usr/local/or1k --enable-shared --disable-itcl --disable-tk --disable-tcl --disable-winsup --disable-libgui --disable-rda --disable-sid --enable-sim --disable-or1ksim --enable-gdb --with-sysroot --enable-newlib --enable-libgloss --disable-werror
 
 make
 
@@ -47,7 +47,7 @@ make install
 
 # build gcc again, this time with newlib
 
-cd ../bld-or1k-gcc
+cd ../build-gcc
 
 ../or1k-gcc/configure --target=or1k-elf --prefix=/usr/local/or1k --enable-languages=c,c++ --disable-shared --disable-libssp --with-newlib
 

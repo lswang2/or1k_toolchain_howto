@@ -55,7 +55,7 @@
 
 > cd ../build-gcc
 
-> ../or1k-gcc/configure --target=or1k-elf --prefix=/usr/local/or1k --enable-languages=c,c++ --disable-shared --disable-libssp --with-newlib
+> ../or1k-gcc/configure --target=or1k-elf --prefix=/usr/local/or1k --enable-languages=c --disable-shared --disable-libssp --with-newlib
 
 > make
 

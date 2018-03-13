@@ -43,6 +43,8 @@ cd ../build-newlib
 
 make
 
+export PATH=$PATH:/usr/local/or1k/bin
+
 make install
 
 # build gcc again, this time with newlib

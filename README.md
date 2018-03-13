@@ -13,7 +13,7 @@ git clone git://github.com/lswang2/newlib
 
 # Build the first set of tools, binutils etc.
 
-# NOTE: on 32-bit machines --disable-werror is needed due to an enum acting as bit mask is considered signed
+- NOTE: on 32-bit machines --disable-werror is needed due to an enum acting as bit mask is considered signed
 
 mkdir bld-or1k-src bld-or1k-gcc
 
@@ -55,7 +55,7 @@ make
 
 make install
 
-Finally, we will want to run the following to put this path in our .bashrc file:
+# Finally, we will want to run the following to put this path in our .bashrc file:
 
 echo "# OpenRISC tool chain path" >> ~/.bashrc
 

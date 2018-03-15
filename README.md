@@ -19,7 +19,7 @@
 
 - NOTE: on 32-bit machines --disable-werror is needed due to an enum acting as bit mask is considered signed
 
-> mkdir build-binutils build-gcc build-newlib
+> mkdir build-binutils build-gcc build-newlib build-gcc2
 
 > cd build-binutils
 
@@ -53,7 +53,7 @@
 
 ## build gcc again, this time with newlib
 
-> cd ../build-gcc
+> cd ../build-gcc2
 
 > ../or1k-gcc/configure --target=or1k-elf --prefix=/usr/local/or1k --enable-languages=c --disable-shared --disable-libssp --with-newlib
 

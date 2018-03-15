@@ -10,9 +10,9 @@
 
 > git clone git://github.com/lswang2/binutils-gdb
 
-> git clone git://github.com/lswang2/or1k-gcc
+> git clone git://github.com/openrisc/or1k-gcc
 
-> git clone git://github.com/lswang2/newlib
+> git clone git://github.com/openrisc/newlib
 
 
 ## Build the first set of tools, binutils etc.

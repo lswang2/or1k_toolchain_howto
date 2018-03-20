@@ -1,4 +1,4 @@
-# If the or1k tools chains are not compiled at centos or RHEL, we can compile new latest gcc,binutils on linux.
+# If the or1k tools chains are not compiled at centos or RHEL, we have to compile new latest gcc,binutils on linux.
 
 > //required libraries:<br>
 > yum install libmpc-devel mpfr-devel gmp-devel zlib-devel<br>
